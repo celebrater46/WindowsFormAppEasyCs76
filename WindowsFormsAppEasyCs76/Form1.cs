@@ -38,7 +38,13 @@ namespace WindowsFormsAppEasyCs76
 
         public void ClickBt(Object sender, EventArgs e)
         {
-            MessageBox.Show("Thank you for shopping.", "Bought");
+            DialogResult dr = MessageBox.Show("Do you really but it?", "Confirm", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (dr == DialogResult.Yes)
+            {
+                MessageBox.Show("Thank you for shopping.", "Bought", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
