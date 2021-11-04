@@ -18,16 +18,16 @@ namespace WindowsFormsAppEasyCs76
         public Form1()
         {
             InitializeComponent();
-            this.Text = "Dialog Test Sample";
+            this.Text = "ダイアログテストやで！！！！";
             this.Width = 250;
             this.Height = 200;
 
             lb = new Label();
-            lb.Text = "Welcome.";
+            lb.Text = "おこしやす！！！！";
             lb.Dock = DockStyle.Top;
 
             bt = new Button();
-            bt.Text = "Buy";
+            bt.Text = "買うやで！";
             bt.Dock = DockStyle.Bottom;
 
             lb.Parent = this;
@@ -38,12 +38,14 @@ namespace WindowsFormsAppEasyCs76
 
         public void ClickBt(Object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Do you really but it?", "Confirm", MessageBoxButtons.YesNo,
+            DialogResult dr = MessageBox.Show("ホンマに買うんか？？？", "確認やで！", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
 
             if (dr == DialogResult.Yes)
             {
-                MessageBox.Show("Thank you for shopping.", "Bought", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // MessageBox.Show("おおきに！！！", "買うたで！", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Form2 form2 = new Form2();
+                form2.ShowDialog();
             }
         }
     }
