@@ -47,6 +47,11 @@ namespace WindowsFormsAppEasyCs76
                 Form2 form2 = new Form2();
                 form2.ShowDialog();
             }
+            else if (dr == DialogResult.No)
+            {
+                Form3 form3 = new Form3();
+                form3.Show();
+            }
         }
     }
 }
